@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <form action="/register" method="post">
+        <div class="form-group">
+            User Type:
+            <select class="ui selection dropdown" name="usertype" style="font-family:'FontAwesome', Arial;">
+                <option value="physician">&#xf0f0; Physician</option>
+                <option value="hospital">&#xf0fd; Hospital</option>
+                <option value="industry">&#xf275; Supplier</option>
+            </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Confirm</button>
+
+    </form>
+{% endblock %}

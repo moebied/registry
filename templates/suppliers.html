@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <form action="/suppliers" method="post">
+        <div><h1>List of Suppliers</h1></div>
+        <table class = "table table-striped" style="width:100%">
+            {% for supplier in suppliers %}
+            <tr>
+                <td>{{supplier.indname}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    </form>
+{% endblock %}

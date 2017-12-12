@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Data
+{% endblock %}
+
+{% block main %}
+    <form action="/data" method="post">
+        <div>
+            <h4>
+                Patient Data Summary for Dr. {{fname}} {{lname}}:
+            </h4>
+        </div>
+        <div>
+            Total Number of Patients: {{total}}
+        </div>
+        <div>
+            Average patient age: {{avg}}
+        </div>
+        <div>
+            Male: {{males}} %  Female: {{females}} %
+        </div>
+        <div>
+            Hip: {{hips}} %  Knee:{{knees}} %
+        </div>
+
+        <div>
+            <h4>
+                National Patient Data Summary:
+            </h4>
+        </div>
+        <div>
+            Total Number of patients: {{TOTAL}}
+        </div>
+        <div>
+            Average patient age: {{AVG}}
+        </div>
+        <div>
+            Male: {{allmales}} %  Female: {{allfemales}} %
+        </div>
+        <div>
+            Hip: {{allhips}} %  Knee:{{allknees}} %
+        </div>
+    </form>
+{% endblock %}

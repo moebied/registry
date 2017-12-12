@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <form action="/hospitals" method="post">
+        <div><h1>List of Hospitals</h1></div>
+        <table class = "table table-striped" style="width:100%">
+            {% for hospital in hospitals %}
+            <tr>
+                <td>{{hospitals.hospname}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    </form>
+{% endblock %}

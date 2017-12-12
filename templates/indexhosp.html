@@ -1,0 +1,25 @@
+{% extends "layouthosp.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <form action="/indexhosp" method="post">
+        <div class="text-left">
+            <div>
+                Welcome! You are now logged into our Hospitals Portal.
+            </div>
+            <div>
+              <h2>About</h2><br>
+              <h4>The Egyptian Joint Replacement Registry serves as a platform for data-driven orthopedic care.</h4><br>
+              <p>The registry facilitates the collection of high quality data regarding all forms of joint replacements taking place in Egypt,
+              including both new implants and revisions. The multi-use platform allows seamless interfacing between surgeons, hospitals and companies.
+              The registry also operates at the highest levels of security, with encrypted databases to ensure patient
+              data remains secure. Each year, a report is be made available overviewing the data collected, and providing physicians with
+              the information necessary to make the best choices for their patients.
+              </p>
+            </div>
+          </div>
+    </form>
+{% endblock %}

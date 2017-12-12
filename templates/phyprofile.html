@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Physician Profile
+{% endblock %}
+
+{% block main %}
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <div class="text-left">
+    <div><h2><b>Physician Profile</b></h2></div>
+    <div><h3><b>Personal Information</b></h2></div>
+    <p>
+        Name: {{ first }} {{ last }}<br>
+        Physician ID: {{ physid }}
+        Phone Number: {{ phone }}<br>
+        Email: {{ email }}<br>
+        Hospital: {{ hospital }}<br>
+        Practice Area: {{ practice }}<br>
+        City: {{ city }}
+    </p>
+    </div>
+
+{% endblock %}

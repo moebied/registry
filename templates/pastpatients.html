@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <form action="/pastpatients" method="post">
+        <div>
+            <p><h5><b>{{fname}} {{lname}}</b></h5></p>
+            <p>Total Number of Entries: {{total}}</p>
+        </div>
+        <table class = "table table-striped" style="width:100%">
+            <tr>
+                <th><b>Patient Name</b></th>
+                <th><b>Age</b></th>
+                <th><b>Procedure Type</b></th>
+                <th><b>Implant Type</b></th>
+                <th><b>Date</b></th>
+            </tr>
+            {% for patient in patients %}
+            <tr>
+                <td>{{patient.lastname}}, {{patient.firstname}}</td>
+                <td>{{patient.age}}</td>
+                <td>{{patient.bodyside}} {{patient.bodypart}}, {{patient.proceduretype}}</td>
+                <td>{{patient.implanttype}}</td>
+                <td>{{patient.date}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    </form>
+{% endblock %}

@@ -1,0 +1,148 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Patient Registration
+{% endblock %}
+
+{% block main %}
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <form action="/patient" method="post">
+        <div><h2><b>Patient Registration</b></h2></div>
+        <div><p>Enter information about your joint replacement patients to add them to the database.</p></div>
+        <div><p><b>Patient Personal Information</b></p></div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="firstname" placeholder="First Name" type="text" required/>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="lastname" placeholder="Last Name" type="text" required/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="age" placeholder="Age" type="text" required/>
+        </div>
+        <div class="form-group" align="left">
+            <p>Sex:
+                <select class="ui selection dropdown" name="sex" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+
+                    <style>
+                    select {
+                        border: 0 !important;  /*Removes border*/
+                        background: #ffff1e url(img/select-arrow.png) no-repeat 90% center;
+                        width: 160px; /*Width of select dropdown to give space for arrow image*/
+                        text-indent: 10px; /* Removes default arrow from firefox*/
+                        text-overflow: "";  /*Removes default arrow from firefox*/ /*My custom style for fonts*/
+                        color: #000000;
+                        border-radius: 15px;
+                        padding: 5px;
+                        box-shadow: inset 0 0 5px rgba(000,000,000, 0.5);
+                        }
+                    </style>
+                </select></p>
+        </div>
+
+        <div><p><b>Patient Procedure Information</b></p></div>
+        <div class="form-group" align="left">
+            <p>Body Part:</p>
+                <p><select class="ui selection dropdown" name="bodypart" required>
+                    <option value="knee">Knee</option>
+                    <option value="hip">Hip</option>
+                </select></p>
+            <style>
+            select {
+                border: 0 !important;  /*Removes border*/
+                background: #ffffff url(img/select-arrow.png) no-repeat 90% center;
+                width: 100px; /*Width of select dropdown to give space for arrow image*/
+                text-indent: 10px; /* Removes default arrow from firefox*/
+                text-overflow: "";  /*Removes default arrow from firefox*/ /*My custom style for fonts*/
+                color: #000000;
+                border-radius: 15px;
+                padding: 5px;
+                box-shadow: inset 0 0 5px rgba(000,000,000, 0.5);
+            }
+            </style>
+        </div>
+        <div class="form-group" align="left">
+            <p>Implant Type:</p>
+                <p><select class="ui selection dropdown" name="implanttype" required>
+                    <option value="type1">Cemented</option>
+                    <option value="type2">Cementless</option>
+                    <option value="type3">Hybrid</option>
+                    <option value="type4">Reverse Hybrid</option>
+                </select>
+            </p>
+            <style>
+            select {
+                border: 0 !important;  /*Removes border*/
+                background: #ffffff url(img/select-arrow.png) no-repeat 90% center;
+                width: 160px; /*Width of select dropdown to give space for arrow image*/
+                text-indent: 5px; /* Removes default arrow from firefox*/
+                text-overflow: "";  /*Removes default arrow from firefox*/ /*My custom style for fonts*/
+                color: #000000;
+                border-radius: 15px;
+                padding: 5px;
+                box-shadow: inset 0 0 5px rgba(000,000,000, 0.5);
+            }
+            </style>
+        </div>
+        <div class="form-group" align="left">
+            <p>Side:</p>
+                <p><select class="ui selection dropdown" name="bodyside" required>
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                </select></p>
+            <style>
+            select {
+                border: 0 !important;  /*Removes border*/
+                background: #ffffff url(img/select-arrow.png) no-repeat 90% center;
+                width: 100px; /*Width of select dropdown to give space for arrow image*/
+                text-indent: 10px; /* Removes default arrow from firefox*/
+                text-overflow: "";  /*Removes default arrow from firefox*/ /*My custom style for fonts*/
+                color: #000000;
+                border-radius: 15px;
+                padding: 5px;
+                box-shadow: inset 0 0 5px rgba(000,000,000, 0.5);
+            }
+            </style>
+        </div>
+        <div class="form-group" align="left">
+            <p>Procedure Type:</p>
+                <p>
+                    <select class="ui selection dropdown" name="proceduretype" required>
+                    <option value="primary">Primary</option>
+                    <option value="revision">Revision</option>
+                    </select>
+                </p>
+            <style>
+            select {
+                border: 0 !important;  /*Removes border*/
+                background: #ffffff url(img/select-arrow.png) no-repeat 90% center;
+                width: 130px; /*Width of select dropdown to give space for arrow image*/
+                text-indent: 15px; /* Removes default arrow from firefox*/
+                text-overflow: "";  /*Removes default arrow from firefox*/ /*My custom style for fonts*/
+                color: #000000;
+                border-radius: 15px;
+                padding: 5px;
+                box-shadow: inset 0 0 5px rgba(000,000,000, 0.5);
+            }
+            </style>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="scorebefore" placeholder="Harris Hip Score Before" type="integer"/>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="scoreafter" placeholder="Harris Hip Score After" type="integer"/>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="date" placeholder="Date of Procedure" type="date" required/>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="city" placeholder="City of Procedure" type="text"/>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="hospital" placeholder="Hospital of Procedure" type="text"/>
+        </div>
+        <button class="btn btn-primary" type="submit">Create Record</button>
+    </form>
+{% endblock %}

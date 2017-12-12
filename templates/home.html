@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<form action="/" method="post">
+<head>
+  <title>EJRR</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="/static/homestyles.css" rel="stylesheet"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#home"><span style="font-size: 17px">EJRR: Data-Driven Orthopedic Care</span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#pricing">PRICING</a></li>
+        <li class="nav-item"><a class="nav-link" href="/register">REGISTER</a></li>
+        <li class="nav-item"><a class="nav-link" href="/login">LOGIN</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Egyptian Joint Replacement Registry</h1>
+  <p><i>Improving Orthopedic Care with Data-Driven Insights</i></p>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-9">
+      <h2>About</h2><br>
+      <h4>The Egyptian Joint Replacement Registry serves as a platform for data-driven orthopedic care.</h4><br>
+      <p>The registry facilitates the collection of high quality data regarding all forms of joint replacements taking place in Egypt,
+      including both new implants and revisions. The multi-use platform allows seamless interfacing between surgeons, hospitals and companies.
+      The registry also operates at the highest levels of security, with encrypted databases to ensure patient
+      data remains secure. Each year, a report is be made available overviewing the data collected, and providing physicians with
+      the information necessary to make the best choices for their patients.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-left">
+    <h2>Pricing</h2>
+    <h4>Our committment to providing reliable information ensures that the basic functionalities of the registry are always free to use</h4>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Basic</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Unlimited Storage</strong></p>
+          <p><strong>Annual National Report</strong> </p>
+          <p><strong>Implant Review Capability</strong></p>
+          <p><strong>Patient Data Report</strong></p>
+        </div>
+        <div class="panel-footer">
+          <h3>$0</h3>
+          <h4>per year</h4>
+          <button class="btn btn-lg"><a href="/register">Register Now</a></button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Premium</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Unlimited Storage</strong></p>
+          <p><strong>Analytics Access</strong></p>
+          <p><strong>Educational Webinars</strong></p>
+          <p><strong>National Data Statistics</strong></p>
+        </div>
+        <div class="panel-footer">
+          <h3>$250</h3>
+          <h4>per year</h4>
+          <button class="btn btn-lg"><a href="/register">Register Now</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
